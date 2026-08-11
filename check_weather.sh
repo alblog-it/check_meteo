@@ -2,8 +2,8 @@
 # Nagios plugin by Alberto AlBlog Leoni
 # you have to install jq and, if missing, also curl
 
-LAT="${1:-45.46}"      # Latitude  - parameter number 1 or, if missing the one of Milan
-LON="${2:-9.19}"       # Longitude - parameter number 2 or, if missing the one of Milan
+LAT="${1:-45.46}"      # Latitude  - parameter number 1 or, if missing, the one of Milan
+LON="${2:-9.19}"       # Longitude - parameter number 2 or, if missing, the one of Milan
 
 RESULT=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=$LAT&longitude=$LON&current=temperature_2m,wind_speed_10m,precipitation,relative_humidity_2m,apparent_temperature")
 rc=$?
